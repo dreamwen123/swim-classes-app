@@ -1,0 +1,12 @@
+<h1>Add New Class</h1>
+<form action="/classes" method="POST">
+    <input type="text" name="title" placeholder="Class Title" required>
+    <textarea name="description" placeholder="Description"></textarea>
+    <select name="difficulty_level">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+    </select>
+    <input type="number" step="0.01" name="price" placeholder="Price" required>
+    <input type="number" name="instructor_id" placeholder="Instructor ID" required>
+    <button type="submit">Create Class</button>
+</form>

@@ -1,0 +1,5 @@
+<h1>Are you sure you want to delete <%= swimClass.title %>?</h1>
+<form action="/classes/<%= swimClass.id %>/delete" method="POST">
+    <button type="submit" style="color: red;">Yes, Delete</button>
+    <a href="/classes">Cancel</a>
+</form>

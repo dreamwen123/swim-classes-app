@@ -1,0 +1,23 @@
+<h1>Adult Swimming Classes</h1>
+
+<form action="/classes/search" method="GET">
+    <select name="level">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+    </select>
+    <input type="number" name="maxPrice" placeholder="Max Price" required>
+    <button type="submit">Search</button>
+</form>
+
+<a href="/classes/new">Add New Class</a>
+
+<ul>
+    <% classes.forEach(c => { %>
+        <li>
+            <strong><%= c.title %></strong> - $<%= c.price %> (<%= c.difficulty_level %>)
+            <br>
+            <a href="/classes/<%= c.id %>/edit">Edit</a> | 
+            <a href="/classes/<%= c.id %>/delete">Delete</a>
+        </li>
+    <% }) %>
+</ul>
